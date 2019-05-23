@@ -3,12 +3,12 @@
 " GitHub: https://github.com/utubo/
 " Notes:
 " Thx: This is based on https://github.com/ggalindezb/vim_colorscheme_template
-
+"
 highlight clear
-if exists("syntax_on")
+if exists('syntax_on')
     syntax reset
 endif
-let g:colors_name="utb"
+let g:colors_name='utb'
 
 " COLORS
 "   <color-type><opacity>
@@ -111,16 +111,16 @@ exe 'hi Folded'        s:fg s:n2 s:bg s:n0
 " -------------------------
 exe 'hi VertSplit'     s:bg s:n1
 exe 'hi ColorColumn'   s:fg s:n2 s:bg s:n1
-exe 'hi TabLine'       s:bg s:n1
-exe 'hi TabLineFill'   s:fg s:n2 s:bg s:n1
-exe 'hi TabLineSel'    s:fg s:n3 s:bg s:n0
+exe 'hi TabLine'       s:fg s:n2 s:bg s:n1
+exe 'hi TabLineFill'   s:bg s:n1
+exe 'hi TabLineSel'    s:fg s:g3 s:bg s:n0 s:bold
 
 " -------------------------------
 " - File Navigation / Searching -
 " -------------------------------
 exe 'hi Directory'     s:fg s:g4
 exe 'hi Search'        s:fg s:n1 s:bg s:g4 s:bold
-exe 'hi IncSearch'     s:fg s:n1 s:bg s:g4 s:style.'none'
+exe 'hi IncSearch'     s:fg s:n1 s:bg s:g4 s:none
 
 " -----------------
 " - Prompt/Status -
@@ -129,7 +129,7 @@ exe 'hi StatusLine'    s:fg s:n2 s:bg s:n1
 exe 'hi StatusLineNC'  s:fg s:n3 s:bg s:n2
 hi! link WildMenu Visual
 exe 'hi Question'      s:fg s:y4
-exe 'hi Title'         s:fg s:g3 s:bold
+exe 'hi Title'         s:fg s:b3 s:bold
 exe 'hi ModeMsg'       s:fg s:n3 s:none
 exe 'hi MoreMsg'       s:fg s:n2
 
