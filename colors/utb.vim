@@ -130,10 +130,10 @@ exe 'hi IncSearch'     s:fg s:n1 s:bg s:g4 s:none
 exe 'hi StatusLine'    s:fg s:n2 s:bg s:n1
 exe 'hi StatusLineNC'  s:fg s:n3 s:bg s:n2
 hi! link WildMenu Visual
-exe 'hi Question'      s:fg s:y4
-exe 'hi Title'         s:fg s:b3 s:bold
-exe 'hi ModeMsg'       s:fg s:n3 s:none
-exe 'hi MoreMsg'       s:fg s:n2
+exe 'hi Question'      s:fg s:y4 s:bg s:n0 s:none
+exe 'hi Title'         s:fg s:b3 s:bg s:n0 s:bold
+exe 'hi ModeMsg'       s:fg s:n3 s:bg s:n0 s:none
+exe 'hi MoreMsg'       s:fg s:n2 s:bg s:n0 s:none
 
 " --------------
 " - Visual aid -
