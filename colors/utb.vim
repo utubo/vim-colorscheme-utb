@@ -8,7 +8,7 @@ highlight clear
 if exists('syntax_on')
 	syntax reset
 endif
-let g:colors_name='utb'
+let g:colors_name=expand('<sfile>:t:r')
 
 " COLORS
 "   <color-type><opacity>
