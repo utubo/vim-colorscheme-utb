@@ -9,6 +9,7 @@ if exists('syntax_on')
 	syntax reset
 endif
 let g:colors_name=expand('<sfile>:t:r')
+let s:background=&background
 
 " COLORS
 "   <color-type><opacity>
@@ -75,6 +76,7 @@ else
 endif
 
 if &background == 'light'
+	let s:background = 'light'
 	let [s:n0, s:n4] = [s:n4, s:n0]
 	let [s:n1, s:n3] = [s:n3, s:n1]
 	let [s:b1, s:b3] = [s:b3, s:b1]
@@ -219,10 +221,11 @@ exe 'hi SpellRare'     s:fg s:b3 s:bg s:n0
 
 " you can do it
 
-"--------------------------------------------------------------------
-" Specific settings                                                 |
-"--------------------------------------------------------------------
+"-------------------------------------------------
+" Specific settings
+"-------------------------------------------------
 exe 'hi EasyMotionTarget' s:fg s:b4
 exe 'hi EasyMotionTarget2First' s:fg s:g4
 hi! link EasyMotionTarget2Second EasyMotionTarget2First
 
+exe 'set background='.s:background
