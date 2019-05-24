@@ -6,7 +6,7 @@
 "
 highlight clear
 if exists('syntax_on')
-    syntax reset
+	syntax reset
 endif
 let g:colors_name='utb'
 
@@ -25,53 +25,53 @@ let g:colors_name='utb'
 "   3: default fg
 "   4: highlight (eg. b4=cursor,g4=search)
 if has('gui_running')
-    let s:term = 'gui'
-    let s:n0 = '#222426'
-    let s:n1 = '#2f3133'
-    let s:n2 = '#88a8aa'
-    let s:n3 = '#ccdddd'
-    let s:n4 = '#ffffff'
-    let s:b1 = '#303840'
-    let s:b2 = '#66aabb'
-    let s:b3 = '#77c4d4'
-    let s:b3 = '#99ddee'
-    let s:b4 = '#10caff'
-    let s:g1 = '#118855'
-    let s:g2 = '#55cc99'
-    let s:g3 = '#88ffbb'
-    let s:g4 = '#22ee99'
-    let s:y1 = '#332211'
-    let s:y2 = '#997755' " not used
-    let s:y3 = '#ffee99'
-    let s:y4 = '#ffcc00'
-    let s:r1 = '#331122'
-    let s:r2 = '#992233' " not used
-    let s:r3 = '#ee6677'
-    let s:r4 = '#ff3344'
+	let s:term = 'gui'
+	let s:n0 = '#222426'
+	let s:n1 = '#2f3133'
+	let s:n2 = '#88a8aa'
+	let s:n3 = '#ccdddd'
+	let s:n4 = '#ffffff'
+	let s:b1 = '#303840'
+	let s:b2 = '#66aabb'
+	let s:b3 = '#77c4d4'
+	let s:b3 = '#99ddee'
+	let s:b4 = '#10caff'
+	let s:g1 = '#118855'
+	let s:g2 = '#55cc99'
+	let s:g3 = '#88ffbb'
+	let s:g4 = '#22ee99'
+	let s:y1 = '#332211'
+	let s:y2 = '#997755' " not used
+	let s:y3 = '#ffee99'
+	let s:y4 = '#ffcc00'
+	let s:r1 = '#331122'
+	let s:r2 = '#992233' " not used
+	let s:r3 = '#ee6677'
+	let s:r4 = '#ff3344'
 else
-    set t_Co=256
-    let s:term = 'cterm'
-    let s:n0 = '236'
-    let s:n1 = '240'
-    let s:n2 = '245'
-    let s:n3 = '253'
-    let s:n4 = '255'
-    let s:b1 = '239'
-    let s:b2 = '74'
-    let s:b3 = '123'
-    let s:b4 = '14'
-    let s:g1 = '65'
-    let s:g2 = '72'
-    let s:g3 = '78'
-    let s:g4 = '154'
-    let s:y1 = '101'
-    let s:y2 = '220' " not used
-    let s:y3 = '227'
-    let s:y4 = '214'
-    let s:r1 = '52'
-    let s:r2 = '124' " not used
-    let s:r3 = '203'
-    let s:r4 = '204'
+	set t_Co=256
+	let s:term = 'cterm'
+	let s:n0 = '236'
+	let s:n1 = '240'
+	let s:n2 = '245'
+	let s:n3 = '253'
+	let s:n4 = '255'
+	let s:b1 = '239'
+	let s:b2 = '74'
+	let s:b3 = '123'
+	let s:b4 = '14'
+	let s:g1 = '65'
+	let s:g2 = '72'
+	let s:g3 = '78'
+	let s:g4 = '154'
+	let s:y1 = '101'
+	let s:y2 = '220' " not used
+	let s:y3 = '227'
+	let s:y4 = '214'
+	let s:r1 = '52'
+	let s:r2 = '124' " not used
+	let s:r3 = '203'
+	let s:r4 = '204'
 endif
 
 if &background == 'light'
