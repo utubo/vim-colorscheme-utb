@@ -44,7 +44,7 @@ if has('gui_running')
     let s:y2 = '#997755' " not used
     let s:y3 = '#ffee99'
     let s:y4 = '#ffcc00'
-    let s:r1 = '#331122' " not used
+    let s:r1 = '#331122'
     let s:r2 = '#992233' " not used
     let s:r3 = '#ee6677'
     let s:r4 = '#ff3344'
@@ -68,10 +68,10 @@ else
     let s:y2 = '220' " not used
     let s:y3 = '227'
     let s:y4 = '214'
-    let s:r1 = '89'  " not used
-    let s:r2 = '161' " not used
-    let s:r3 = '161'
-    let s:r4 = '197'
+    let s:r1 = '52'
+    let s:r2 = '124' " not used
+    let s:r3 = '203'
+    let s:r4 = '204'
 endif
 
 if &background == 'light'
@@ -212,10 +212,12 @@ exe 'hi PmenuThumb'    s:bg s:b3
 " --------------------------------
 " Spelling
 " --------------------------------
-exe 'hi SpellBad'      s:fg s:r4
-exe 'hi SpellCap'      s:fg s:r4
-exe 'hi SpellLocal'    s:fg s:r3
-exe 'hi SpellRare'     s:fg s:y3
+exe 'hi SpellBad'      s:fg s:r3 s:bg s:r1 s:style 'undercurl'
+exe 'hi SpellCap'      s:fg s:y3 s:bg s:n0 s:style 'undercurl'
+exe 'hi SpellLocal'    s:fg s:g3 s:bg s:n0
+exe 'hi SpellRare'     s:fg s:b3 s:bg s:n0
+
+" you can do it
 
 "--------------------------------------------------------------------
 " Specific settings                                                 |
