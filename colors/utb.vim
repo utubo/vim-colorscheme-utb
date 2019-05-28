@@ -28,7 +28,7 @@ let s:background=&background
 if has('gui_running')
 	let s:term = 'gui'
 	let s:n0 = '#222426'
-	let s:n1 = '#2f3133'
+	let s:n1 = '#505354'
 	let s:n2 = '#88a8aa'
 	let s:n3 = '#ccdddd'
 	let s:n4 = '#ffffff'
