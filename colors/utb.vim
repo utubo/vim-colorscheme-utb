@@ -1,6 +1,6 @@
 " utb colorscheme
 " Author: utubo
-" GitHub: https://github.com/utubo/
+" GitHub: https://github.com/utubo/vim-utb
 " Notes:
 " Thx: This is based on https://github.com/ggalindezb/vim_colorscheme_template
 "
