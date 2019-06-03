@@ -60,7 +60,7 @@ else
 	let s:b1 = '239'
 	let s:b2 = '74'
 	let s:b3 = '123'
-	let s:b4 = '14'
+	let s:b4 = '39'
 	let s:g1 = '65'
 	let s:g2 = '72'
 	let s:g3 = '78'
