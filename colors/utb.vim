@@ -122,7 +122,7 @@ exe 'hi TabLineSel'    s:fg s:g3 s:bg s:n0 s:bold
 " -------------------------------
 exe 'hi Directory'     s:fg s:g4
 exe 'hi Search'        s:fg s:n1 s:bg s:g4 s:bold
-exe 'hi IncSearch'     s:fg s:n0 s:bg s:y4 s:bold
+hi! link IncSearch Cursor
 
 " -----------------
 " - Prompt/Status -
