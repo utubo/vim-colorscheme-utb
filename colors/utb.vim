@@ -25,6 +25,7 @@ let s:background=&background
 "   2: middle fg
 "   3: default fg
 "   4: highlight (eg. b4=cursor,g4=search)
+"   9: highlight when &background == 'light'
 if has('gui_running')
 	let s:term = 'gui'
 	let s:n0 = '#222426'
@@ -37,18 +38,22 @@ if has('gui_running')
 	let s:b3 = '#77c4d4'
 	let s:b3 = '#99ddee'
 	let s:b4 = '#10caff'
+	let s:b9 = s:b4
 	let s:g1 = '#118855'
 	let s:g2 = '#55cc99'
 	let s:g3 = '#88ffbb'
 	let s:g4 = '#22ee99'
+	let s:g9 = '#66aa66'
 	let s:y1 = '#332211'
 	let s:y2 = '#997755' " not used
 	let s:y3 = '#ffee99'
 	let s:y4 = '#ffcc00'
+	let s:y9 = '#8700ff' " purple
 	let s:r1 = '#331122'
 	let s:r2 = '#992233' " not used
 	let s:r3 = '#ee6677'
 	let s:r4 = '#ff3344'
+	let s:r9 = s:r4
 else
 	set t_Co=256
 	let s:term = 'cterm'
@@ -61,28 +66,31 @@ else
 	let s:b2 = '74'
 	let s:b3 = '123'
 	let s:b4 = '39'
+	let s:b9 = s:b4
 	let s:g1 = '65'
 	let s:g2 = '72'
 	let s:g3 = '78'
 	let s:g4 = '154'
+	let s:g9 = '71'
 	let s:y1 = '101'
 	let s:y2 = '220' " not used
 	let s:y3 = '227'
 	let s:y4 = '214'
+	let s:y9 = '93' " purple
 	let s:r1 = '52'
 	let s:r2 = '124' " not used
 	let s:r3 = '203'
 	let s:r4 = '204'
+	let s:r9 = s:r4
 endif
 
 if &background == 'light'
 	let s:background = 'light'
-	let [s:n0, s:n4] = [s:n4, s:n0]
-	let [s:n1, s:n3] = [s:n3, s:n1]
-	let [s:b1, s:b3] = [s:b3, s:b1]
-	let [s:g1, s:g3] = [s:g3, s:g1]
-	let [s:y1, s:y3] = [s:y3, s:y1]
-	let [s:r1, s:r3] = [s:r3, s:r1]
+	let [s:n0, s:n1, s:n3, s:n4] = [s:n4, s:n3, s:n1, s:n0]
+	let [s:b1, s:b3, s:b4] = [s:b3, s:b1, s:b9]
+	let [s:g1, s:g3, s:g4] = [s:g3, s:g1, s:g9]
+	let [s:y1, s:y3, s:y4] = [s:y3, s:y1, s:y9]
+	let [s:r1, s:r3, s:r4] = [s:r3, s:r1, s:r9]
 endif
 
 let s:fg     = s:term.'fg='
@@ -121,7 +129,7 @@ exe 'hi TabLineSel'    s:fg s:g3 s:bg s:n0 s:bold
 " - File Navigation / Searching -
 " -------------------------------
 exe 'hi Directory'     s:fg s:g4
-exe 'hi Search'        s:fg s:n1 s:bg s:g4 s:bold
+exe 'hi Search'        s:fg s:n4 s:bg s:g4 s:bold
 hi! link IncSearch Cursor
 
 " -----------------
@@ -224,8 +232,9 @@ exe 'hi SpellRare'     s:fg s:b3 s:bg s:n0
 "-------------------------------------------------
 " Specific settings
 "-------------------------------------------------
-exe 'hi EasyMotionTarget' s:fg s:b4
-exe 'hi EasyMotionTarget2First' s:fg s:g4
+exe 'hi EasyMotionShadeDefault' s:fg s:n2 s:bg s:n0
+exe 'hi EasyMotionTarget' s:fg s:b4 s:bg s:n0
+exe 'hi EasyMotionTarget2First' s:fg s:g4 s:bg s:n0
 hi! link EasyMotionTarget2Second EasyMotionTarget2First
 
 exe 'set background='.s:background
