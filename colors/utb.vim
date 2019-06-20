@@ -48,7 +48,7 @@ if has('gui_running')
 	let s:y2 = '#997755' " not used
 	let s:y3 = '#ffee99'
 	let s:y4 = '#ffcc00'
-	let s:y9 = '#8700ff' " purple
+	let s:y9 = '#cc60ee' " purple
 	let s:r1 = '#331122'
 	let s:r2 = '#992233' " not used
 	let s:r3 = '#ee6677'
@@ -76,7 +76,7 @@ else
 	let s:y2 = '220' " not used
 	let s:y3 = '227'
 	let s:y4 = '214'
-	let s:y9 = '93' " purple
+	let s:y9 = '135' " purple
 	let s:r1 = '52'
 	let s:r2 = '124' " not used
 	let s:r3 = '203'
