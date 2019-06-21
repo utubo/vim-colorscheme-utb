@@ -75,7 +75,7 @@ else
 	let s:y1 = '101'
 	let s:y2 = '220' " not used
 	let s:y3 = '227'
-	let s:y4 = '214'
+	let s:y4 = '11'
 	let s:y9 = '93' " purple
 	let s:r1 = '52'
 	let s:r2 = '124' " not used
