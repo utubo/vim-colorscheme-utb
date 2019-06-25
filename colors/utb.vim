@@ -20,12 +20,12 @@ let s:background=&background
 "   y: warn(yellow)
 "   r: error(red)
 " opacity:
-"   0: 0% (only n0)
-"   1: bg
-"   2: middle fg
-"   3: default fg
-"   4: highlight (eg. b4=cursor,g4=search)
-"   9: highlight when &background == 'light'
+"   0: 0% default bg (only n0)
+"   1: 10% bg
+"   2: 50% middle fg
+"   3: 100% default fg
+"   4: Highlight (eg. b4=cursor,g4=search)
+"   9: Highlight on &background == 'light'
 if has('gui_running')
 	let s:term = 'gui'
 	let s:n0 = '#222426'
