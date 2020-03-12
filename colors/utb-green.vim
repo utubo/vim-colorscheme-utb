@@ -129,7 +129,7 @@ exe 'hi TabLineSel'    s:fg s:g3 s:bg s:n0 s:bold
 " - File Navigation / Searching -
 " -------------------------------
 exe 'hi Directory'     s:fg s:g4
-exe 'hi Search'        s:fg s:n4 s:bg s:g4 s:bold
+exe 'hi Search'        s:fg s:n0 s:bg s:g4 s:bold
 hi! link IncSearch Cursor
 
 " -----------------
@@ -146,7 +146,7 @@ exe 'hi MoreMsg'       s:fg s:n2 s:bg s:n0 s:none
 " --------------
 " - Visual aid -
 " --------------
-exe 'hi MatchParen'    s:fg s:n3 s:bg s:b2
+exe 'hi MatchParen'    s:fg s:b4 s:bg s:n0
 exe 'hi Visual'        s:fg s:n4 s:bg s:b2 s:none
 exe 'hi VisualNOS'     s:fg s:n2 s:bg s:b3 s:none
 exe 'hi NonText'       s:fg s:n1 s:none
