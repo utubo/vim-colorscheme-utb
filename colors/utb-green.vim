@@ -8,8 +8,9 @@ highlight clear
 if exists('syntax_on')
 	syntax reset
 endif
-let g:colors_name=expand('<sfile>:t:r')
-let s:background=&background
+let s:colors_name = expand('<sfile>:t:r')
+let g:colors_name = s:colors_name
+let s:background = &background
 
 " COLORS
 "   <color-type><opacity>
@@ -237,4 +238,22 @@ exe 'hi EasyMotionTarget' s:fg s:b4 s:bg s:n0
 exe 'hi EasyMotionTarget2First' s:fg s:g4 s:bg s:n0
 hi! link EasyMotionTarget2Second EasyMotionTarget2First
 
+function s:CustomSyntax()
+	if g:colors_name != s:colors_name
+		augroup color_scheme_utb | au! | augroup END
+		return
+	endif
+	exe 'hi GitGutterDefault' s:fg s:n2 s:bg s:n1
+	exe 'hi GitGutterAddDefault' s:fg s:g3 s:bg s:n1
+	exe 'hi GitGutterChangeDefault' s:fg s:y3 s:bg s:n1
+	exe 'hi GitGutterDeleteDefault' s:fg s:r3 s:bg s:n1
+endfunction
+
+augroup color_scheme_utb
+	au!
+	au ColorScheme,Syntax * call <SID>CustomSyntax()
+augroup END
+call <SID>CustomSyntax()
+
 exe 'set background='.s:background
+
