@@ -247,6 +247,9 @@ function s:CustomSyntax()
 	exe 'hi GitGutterAddDefault' s:fg s:g3 s:bg s:n1
 	exe 'hi GitGutterChangeDefault' s:fg s:y3 s:bg s:n1
 	exe 'hi GitGutterDeleteDefault' s:fg s:r3 s:bg s:n1
+	hi! link diffAdded DiffAdd
+	hi! link diffChanged DiffChange
+	hi! link diffRemoved DiffDelete
 endfunction
 
 augroup color_scheme_utb
