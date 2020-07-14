@@ -243,10 +243,9 @@ function s:CustomSyntax()
 		augroup color_scheme_utb | au! | augroup END
 		return
 	endif
-	exe 'hi GitGutterDefault' s:fg s:n2 s:bg s:n1
-	exe 'hi GitGutterAddDefault' s:fg s:g3 s:bg s:n1
-	exe 'hi GitGutterChangeDefault' s:fg s:y3 s:bg s:n1
-	exe 'hi GitGutterDeleteDefault' s:fg s:r3 s:bg s:n1
+	exe 'hi GitGutterAdd' s:fg s:g3 s:bg s:n1
+	exe 'hi GitGutterChange' s:fg s:y3 s:bg s:n1
+	exe 'hi GitGutterDelete' s:fg s:r3 s:bg s:n1
 	hi! link diffAdded DiffAdd
 	hi! link diffChanged DiffChange
 	hi! link diffRemoved DiffDelete
