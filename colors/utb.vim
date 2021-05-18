@@ -238,9 +238,12 @@ exe 'hi EasyMotionTarget' s:fg s:b4 s:bg s:n0
 exe 'hi EasyMotionTarget2First' s:fg s:g4 s:bg s:n0
 hi! link EasyMotionTarget2Second EasyMotionTarget2First
 
+exe 'hi ALEErrorSign' s:fg s:r4 s:bg s:n1
+exe 'hi ALEWarningSign' s:fg s:y4 s:bg s:n1
+
 function s:CustomSyntax()
 	if g:colors_name != s:colors_name
-		augroup color_scheme_utb | au! | augroup END
+		exe 'augroup CustomSyntax_' . s:colors_name . '|au!|augroup END'
 		return
 	endif
 	exe 'hi GitGutterAdd' s:fg s:g3 s:bg s:n1
@@ -251,11 +254,8 @@ function s:CustomSyntax()
 	hi! link diffRemoved DiffDelete
 endfunction
 
-augroup color_scheme_utb
-	au!
-	au ColorScheme,Syntax * call <SID>CustomSyntax()
-augroup END
-call <SID>CustomSyntax()
+exe 'augroup CustomSyntax_' . s:colors_name . '|au!|au ColorScheme,Syntax * call <SID>CustomSyntax()|augroup END'
+call s:CustomSyntax()
 
 exe 'set background='.s:background
 
