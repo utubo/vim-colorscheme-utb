@@ -13,8 +13,8 @@ let g:colors_name = s:colors_name
 let s:background = &background
 
 " COLORS
-"   <color-type><opacity>
-" color-type:
+"   <type><opacity>
+" type:
 "   n: normal
 "   b: positiv1(blue)
 "   g: positiv2(green)
@@ -86,7 +86,6 @@ else
 endif
 
 if &background == 'light'
-	let s:background = 'light'
 	let [s:n0, s:n1, s:n3, s:n4] = [s:n4, s:n3, s:n1, s:n0]
 	let [s:b1, s:b3, s:b4] = [s:b3, s:b1, s:b9]
 	let [s:g1, s:g3, s:g4] = [s:g3, s:g1, s:g9]
@@ -101,6 +100,9 @@ let s:none   = s:style.'NONE'
 let s:bold   = s:style.'bold'
 let s:italic = s:style.'italic'
 
+" --------
+" - Base -
+" --------
 exe 'hi Normal'        s:fg s:n3 s:bg s:n0
 exe 'hi Cursor'        s:fg s:n4 s:bg s:b4
 exe 'hi CursorIM'      s:fg s:n4 s:bg s:y4
@@ -233,6 +235,8 @@ exe 'hi SpellRare'     s:fg s:b3 s:bg s:n0
 "-------------------------------------------------
 " Specific settings
 "-------------------------------------------------
+exe 'hi javaScriptEmbed' s:fg s:g3 s:bg s:b1
+
 exe 'hi EasyMotionShadeDefault' s:fg s:n2 s:bg s:n0
 exe 'hi EasyMotionTarget' s:fg s:b4 s:bg s:n0
 exe 'hi EasyMotionTarget2First' s:fg s:g4 s:bg s:n0
